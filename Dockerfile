@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:8.2
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN apt-get update && apt-get -y install libzip-dev libicu-dev
 RUN docker-php-ext-install mysqli zip intl
