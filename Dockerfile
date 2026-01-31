@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:8.5.3RC1-trixie
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN apt-get update && apt-get -y install libzip-dev libicu-dev libgmp-dev
 RUN docker-php-ext-install mysqli zip intl bcmath gmp
